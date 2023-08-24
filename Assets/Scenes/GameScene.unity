@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453bff7bc8b082a45a1c9dd86e93e23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestTime: 12
+  TestTime: 0
   MaxHunger: 0
   Hunger: 0
   MaxHappiness: 0
@@ -2063,9 +2063,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  FoodGO: []
   FoodEnable: {fileID: 0}
-  FoodDisable: {fileID: 0}
 --- !u!1 &1715792635
 GameObject:
   m_ObjectHideFlags: 0
