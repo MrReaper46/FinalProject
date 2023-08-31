@@ -16,7 +16,7 @@ public class PetStats : MonoBehaviour
 
 
     [Header("Hunger Attribute")]
-    public Sprite[] FoodSprite;
+    public Image[] FoodImg;
     public Sprite FoodEnable;
     public Sprite FoodDisable;
 
@@ -45,6 +45,19 @@ public class PetStats : MonoBehaviour
         StatsOverTime();
         UpdateHunger();
         //UpdateHappiness();
+        int remainFood = (int)CurrentHunger / 20;
+        Debug.Log("Foode Remaining: " + remainFood);
+        for (int i = 0; i < remainFood; i++)
+        {
+            FoodImg[i].sprite = FoodEnable;
+            Debug.Log(FoodImg[i].sprite);
+        }
+        for (int i = remainFood; i >= 0; i--)
+        {
+            FoodImg[i].sprite = FoodDisable;
+            Debug.Log(FoodImg[i].sprite);
+        }
+
     }
 
     private void SetButton()
@@ -73,11 +86,14 @@ public class PetStats : MonoBehaviour
         FoodDisable = Resources.Load<Sprite>("UI/food_disable");
         HeartEnable = Resources.Load<Sprite>("UI/heart");
         HeartDisable = Resources.Load<Sprite>("UI/heart_disable");
-        FoodSprite = new Sprite[(int)MaxHunger / 20];
-        for (int i = 0; i < (int)MaxHunger / 20; i++)
+        FoodImg = new Image[(int)MaxHunger / 20];
+        
+        int maxFood = (int)MaxHunger / 20;
+        for (int i = 0; i < maxFood; i++)
         {
-            FoodSprite[i] = GameObject.Find($"Food{i + 1}").GetComponent<Image>().sprite;
+            FoodImg[i] = GameObject.Find($"Food{i + 1}").GetComponent<Image>()  ;
         }
+        
         //UpdateUIHunger((int)MaxHunger/20);
         //UpdateUIHappiness((int)MaxHappiness/20);
     }
