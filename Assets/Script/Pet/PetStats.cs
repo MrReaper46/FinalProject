@@ -31,7 +31,7 @@ public class PetStats : MonoBehaviour
         get { return maxHappiness; }
     }
     private void Start()
-    {        
+    {
         SetStats();
         UI_Manager.Instance.LoadResourceForUI();
     }
