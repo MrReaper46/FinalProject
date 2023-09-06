@@ -9,8 +9,8 @@ public class PetStats : MonoBehaviour
     [SerializeField] private float currentHunger;
     [SerializeField] private float maxHappiness;
     [SerializeField] private float currentHappiness;
-    [Range(0, 20)]
-    public int DecaySpd = 1;
+    [Range(0, 50)]
+    [SerializeField] private int DecaySpd = 1;
 
     public float CurrentHunger
     {
@@ -33,7 +33,7 @@ public class PetStats : MonoBehaviour
     private void Start()
     {
         SetStats();
-        UI_Manager.Instance.LoadResourceForUI();
+        UIManager.Instance.LoadResourceForUI();
     }
 
     private void Update()

@@ -5,23 +5,30 @@ using TMPro;
 
 public class LoadSelectedPet : MonoBehaviour
 {
-    public GameObject[] PetPrefabs;
-    public Transform SpawnPosition;
-    public TMP_Text PetName;
-    public RuntimeAnimatorController Animator;
-    
+    private GameObject[] petPrefabs;
+    public GameObject[] PetPrefabs { get => petPrefabs; set => petPrefabs = value; }
+
+    private Transform spawnPosition;
+    public Transform SpawnPosition { get => spawnPosition; set => spawnPosition = value; }
+
+    private RuntimeAnimatorController animator;
+    public RuntimeAnimatorController Animator { get => animator; set => animator = value; }
+
+    private static LoadSelectedPet instance;
+    public static LoadSelectedPet Instance { get => instance; set => instance = value; }
+
     private void Start()
     {
+        instance = this;
         LoadPet();
     }
-
-    private void LoadPet()
+    public void LoadPet()
     {
         //Create Pet
         int selectedPet = PlayerPrefs.GetInt("SelectedPet");
         GameObject prefabs = PetPrefabs[selectedPet];
         GameObject clone = Instantiate(prefabs, SpawnPosition.position, Quaternion.identity, GameObject.Find("Pet").transform);
-        PetName.text = prefabs.name;
+        string petName = prefabs.name;
 
         //Add Component
         clone.AddComponent<Rigidbody>();
@@ -39,7 +46,7 @@ public class LoadSelectedPet : MonoBehaviour
 
         //Set Animator
         string PetPath;
-        PetPath = $"Forest Animals/{PetName.text}/3D/{PetName.text} Default";
+        PetPath = $"Forest Animals/{petName}/3D/{petName} Default";
         Animator = Resources.Load(PetPath) as RuntimeAnimatorController;
         var cloneAnimator = clone.GetComponent<Animator>();
         cloneAnimator.runtimeAnimatorController = Animator;

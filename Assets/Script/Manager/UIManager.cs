@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Manager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [Header("SET_PETSTATS")]
     [SerializeField] protected PetStats PetStats_Select;
@@ -22,15 +22,14 @@ public class UI_Manager : MonoBehaviour
 
     [Header("SET_IMG")]
     [SerializeField] protected GameObject[] ui_EN;
-    [SerializeField] protected GameObject[] ui_HP;
     [SerializeField] protected Image[] img_EN;
-    [SerializeField] protected Image[] img_HP;
     
     [Header("LOAD_SPRITE")]
     [SerializeField] protected Sprite EN_on;
     [SerializeField] protected Sprite EN_off;
-    [SerializeField] protected Sprite HP_on;
-    [SerializeField] protected Sprite HP_off;
+
+    [Header("LOAD_SLIDER")]
+    [SerializeField] protected Slider HappinessFill;
 
     [Header("REMAINING_RESOURCE")]
     [SerializeField] protected int remainEN;
@@ -38,8 +37,8 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] protected int maxEN;
     [SerializeField] protected int maxHP;
 
-    private static UI_Manager instance;
-    public static UI_Manager Instance { get => instance; }
+    private static UIManager instance;
+    public static UIManager Instance { get => instance; }
     
 
     void Awake()
@@ -64,21 +63,14 @@ public class UI_Manager : MonoBehaviour
 
     private void SetUI()
     {
+        HappinessFill = GameObject.Find("Happiness/Bar_Happiness").GetComponent<Slider>();
         ui_EN = new GameObject[GameObject.FindGameObjectsWithTag("UI_EN").Length];
         ui_EN = GameObject.FindGameObjectsWithTag("UI_EN");
-        ui_HP = new GameObject[GameObject.FindGameObjectsWithTag("UI_HP").Length];
-        ui_HP = GameObject.FindGameObjectsWithTag("UI_HP");
 
         img_EN = new Image[GameObject.FindGameObjectsWithTag("UI_EN").Length];
         for (int i = 0; i < img_EN.Length; ++i)
         {
             img_EN[i] = ui_EN[i].GetComponent<Image>();
-        }
-
-        img_HP = new Image[GameObject.FindGameObjectsWithTag("UI_HP").Length];
-        for (int i = 0; i < img_HP.Length; ++i)
-        {
-            img_HP[i] = ui_HP[i].GetComponent<Image>();
         }
     }
 
@@ -94,8 +86,6 @@ public class UI_Manager : MonoBehaviour
     {
         EN_on = Resources.Load<Sprite>("UI/energy");
         EN_off = Resources.Load<Sprite>("UI/energy_disable");
-        HP_on = Resources.Load<Sprite>("UI/heart");
-        HP_off = Resources.Load<Sprite>("UI/heart_disable");
     }
 
     void Update()
@@ -103,13 +93,13 @@ public class UI_Manager : MonoBehaviour
         UpdateStatsPanel();
 
         maxEN = Mathf.CeilToInt(PetStats_Select.MaxHunger / 20);
-        maxHP = Mathf.CeilToInt(PetStats_Select.MaxHappiness / 20);
+        maxHP = Mathf.CeilToInt(PetStats_Select.MaxHappiness);
         remainEN = Mathf.CeilToInt(PetStats_Select.CurrentHunger / 20);
-        remainHP = Mathf.CeilToInt(PetStats_Select.CurrentHappiness / 20);
+        remainHP = Mathf.CeilToInt(PetStats_Select.CurrentHappiness);
 
         UpdateStat(maxEN,remainEN,img_EN,EN_on,EN_off);
-        UpdateStat(maxHP,remainHP,img_HP,HP_on,HP_off);
 
+        HappinessFill.value = remainHP;
     }
 
     private void UpdateStat(int max, int remain, Image[] img, Sprite sprite_On, Sprite  sprite_Off)

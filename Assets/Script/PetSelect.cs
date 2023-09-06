@@ -21,10 +21,6 @@ public class PetSelect : MonoBehaviour
         LeanTween.rotateAround(this.gameObject, Vector3.up, 360, 10.0f).setLoopClamp();
     }
 
-    private void Update()
-    {
-        
-    }
     public void NextPet()
     {
         Pets[SelectedPet].SetActive(false);
