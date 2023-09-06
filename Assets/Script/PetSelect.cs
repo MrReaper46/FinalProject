@@ -18,6 +18,7 @@ public class PetSelect : MonoBehaviour
     public void Start()
     {
         instance = this;
+        LeanTween.rotateAround(this.gameObject, Vector3.up, 360, 10.0f).setLoopClamp();
     }
 
     private void Update()
@@ -29,7 +30,6 @@ public class PetSelect : MonoBehaviour
         Pets[SelectedPet].SetActive(false);
         SelectedPet = (SelectedPet + 1) % Pets.Length;
         Pets[SelectedPet].SetActive(true);
-        Debug.Log(SelectedPet);
     }
 
     public void PreviousPet()
@@ -41,6 +41,5 @@ public class PetSelect : MonoBehaviour
             SelectedPet += Pets.Length;
         }
         Pets[SelectedPet].SetActive(true);
-        Debug.Log(SelectedPet);
     }
 }

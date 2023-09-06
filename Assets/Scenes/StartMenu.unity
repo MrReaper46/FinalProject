@@ -557,9 +557,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.44
-  m_Height: 2.3
+  m_Height: 2.1
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.05, z: 0}
 --- !u!1001 &1250484190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1608,6 +1608,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 843eca69d80e8f040887961b183387a9, type: 2}
+    - target: {fileID: 9500000, guid: de9f2ff07abc69b4799588404d2e26be, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de9f2ff07abc69b4799588404d2e26be, type: 3}
 --- !u!4 &2077687740 stripped
@@ -1648,10 +1652,10 @@ RectTransform:
   m_Father: {fileID: 1299509259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1491.1, y: 512}
+  m_SizeDelta: {x: 1491.1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111081186
 MonoBehaviour:
@@ -1675,7 +1679,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: b5482ef78948e8f45a1ce1d63de39fd2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

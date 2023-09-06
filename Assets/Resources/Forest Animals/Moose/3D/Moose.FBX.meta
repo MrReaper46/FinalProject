@@ -1,126 +1,356 @@
 fileFormatVersion: 2
 guid: aac38fe79c31122439963e7620da0b25
-timeCreated: 1544442746
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: Eye Left
-    100002: Eye Right
-    100004: //RootNode
-    100006: Moose Mesh
-    100008: TopoSurface001
-    100010: Moose
-    100012: Moose Head
-    100014: Moose Jaw
-    100016: Moose L Calf
-    100018: Moose L Clavicle
-    100020: Moose L Ear
-    100022: Moose L Ear02
-    100024: Moose L Eyebrow
-    100026: Moose L Finger0
-    100028: Moose L Foot
-    100030: Moose L Forearm
-    100032: Moose L Hand
-    100034: Moose L Lower Eyelid
-    100036: Moose L Lower Mouth
-    100038: Moose L Mouth
-    100040: Moose L Thigh
-    100042: Moose L Toe0
-    100044: Moose L Upper Eyelid
-    100046: Moose L Upper Mouth
-    100048: Moose L UpperArm
-    100050: Moose Neck
-    100052: Moose Pelvis
-    100054: Moose R Calf
-    100056: Moose R Clavicle
-    100058: Moose R Ear
-    100060: Moose R Ear02
-    100062: Moose R Eyebrow
-    100064: Moose R Finger0
-    100066: Moose R Foot
-    100068: Moose R Forearm
-    100070: Moose R Hand
-    100072: Moose R Lower Eyelid
-    100074: Moose R Lower Mouth
-    100076: Moose R Mouth
-    100078: Moose R Thigh
-    100080: Moose R Toe0
-    100082: Moose R Upper Eyelid
-    100084: Moose R Upper Mouth
-    100086: Moose R UpperArm
-    100088: Moose Spine
-    100090: Moose Spine1
-    100092: Moose Spine2
-    100094: Moose Tail
-    100096: Moose Tongue
-    100098: Moose Tongue02
-    100100: Moose Tongue03
-    400000: Eye Left
-    400002: Eye Right
-    400004: //RootNode
-    400006: Moose Mesh
-    400008: TopoSurface001
-    400010: Moose
-    400012: Moose Head
-    400014: Moose Jaw
-    400016: Moose L Calf
-    400018: Moose L Clavicle
-    400020: Moose L Ear
-    400022: Moose L Ear02
-    400024: Moose L Eyebrow
-    400026: Moose L Finger0
-    400028: Moose L Foot
-    400030: Moose L Forearm
-    400032: Moose L Hand
-    400034: Moose L Lower Eyelid
-    400036: Moose L Lower Mouth
-    400038: Moose L Mouth
-    400040: Moose L Thigh
-    400042: Moose L Toe0
-    400044: Moose L Upper Eyelid
-    400046: Moose L Upper Mouth
-    400048: Moose L UpperArm
-    400050: Moose Neck
-    400052: Moose Pelvis
-    400054: Moose R Calf
-    400056: Moose R Clavicle
-    400058: Moose R Ear
-    400060: Moose R Ear02
-    400062: Moose R Eyebrow
-    400064: Moose R Finger0
-    400066: Moose R Foot
-    400068: Moose R Forearm
-    400070: Moose R Hand
-    400072: Moose R Lower Eyelid
-    400074: Moose R Lower Mouth
-    400076: Moose R Mouth
-    400078: Moose R Thigh
-    400080: Moose R Toe0
-    400082: Moose R Upper Eyelid
-    400084: Moose R Upper Mouth
-    400086: Moose R UpperArm
-    400088: Moose Spine
-    400090: Moose Spine1
-    400092: Moose Spine2
-    400094: Moose Tail
-    400096: Moose Tongue
-    400098: Moose Tongue02
-    400100: Moose Tongue03
-    2100000: Moose
-    2100002: Eyes
-    2100004: Eye Shine
-    2300000: Eye Left
-    2300002: Eye Right
-    2300004: Moose Mesh
-    3300000: Eye Left
-    3300002: Eye Right
-    3300004: Moose Mesh
-    4300000: Moose Mesh
-    4300002: Eye Right
-    4300004: Eye Left
-    9500000: //RootNode
-    13700000: Moose Mesh
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Eye Left
+  - first:
+      1: 100002
+    second: Eye Right
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: Moose Mesh
+  - first:
+      1: 100008
+    second: TopoSurface001
+  - first:
+      1: 100010
+    second: Moose
+  - first:
+      1: 100012
+    second: Moose Head
+  - first:
+      1: 100014
+    second: Moose Jaw
+  - first:
+      1: 100016
+    second: Moose L Calf
+  - first:
+      1: 100018
+    second: Moose L Clavicle
+  - first:
+      1: 100020
+    second: Moose L Ear
+  - first:
+      1: 100022
+    second: Moose L Ear02
+  - first:
+      1: 100024
+    second: Moose L Eyebrow
+  - first:
+      1: 100026
+    second: Moose L Finger0
+  - first:
+      1: 100028
+    second: Moose L Foot
+  - first:
+      1: 100030
+    second: Moose L Forearm
+  - first:
+      1: 100032
+    second: Moose L Hand
+  - first:
+      1: 100034
+    second: Moose L Lower Eyelid
+  - first:
+      1: 100036
+    second: Moose L Lower Mouth
+  - first:
+      1: 100038
+    second: Moose L Mouth
+  - first:
+      1: 100040
+    second: Moose L Thigh
+  - first:
+      1: 100042
+    second: Moose L Toe0
+  - first:
+      1: 100044
+    second: Moose L Upper Eyelid
+  - first:
+      1: 100046
+    second: Moose L Upper Mouth
+  - first:
+      1: 100048
+    second: Moose L UpperArm
+  - first:
+      1: 100050
+    second: Moose Neck
+  - first:
+      1: 100052
+    second: Moose Pelvis
+  - first:
+      1: 100054
+    second: Moose R Calf
+  - first:
+      1: 100056
+    second: Moose R Clavicle
+  - first:
+      1: 100058
+    second: Moose R Ear
+  - first:
+      1: 100060
+    second: Moose R Ear02
+  - first:
+      1: 100062
+    second: Moose R Eyebrow
+  - first:
+      1: 100064
+    second: Moose R Finger0
+  - first:
+      1: 100066
+    second: Moose R Foot
+  - first:
+      1: 100068
+    second: Moose R Forearm
+  - first:
+      1: 100070
+    second: Moose R Hand
+  - first:
+      1: 100072
+    second: Moose R Lower Eyelid
+  - first:
+      1: 100074
+    second: Moose R Lower Mouth
+  - first:
+      1: 100076
+    second: Moose R Mouth
+  - first:
+      1: 100078
+    second: Moose R Thigh
+  - first:
+      1: 100080
+    second: Moose R Toe0
+  - first:
+      1: 100082
+    second: Moose R Upper Eyelid
+  - first:
+      1: 100084
+    second: Moose R Upper Mouth
+  - first:
+      1: 100086
+    second: Moose R UpperArm
+  - first:
+      1: 100088
+    second: Moose Spine
+  - first:
+      1: 100090
+    second: Moose Spine1
+  - first:
+      1: 100092
+    second: Moose Spine2
+  - first:
+      1: 100094
+    second: Moose Tail
+  - first:
+      1: 100096
+    second: Moose Tongue
+  - first:
+      1: 100098
+    second: Moose Tongue02
+  - first:
+      1: 100100
+    second: Moose Tongue03
+  - first:
+      4: 400000
+    second: Eye Left
+  - first:
+      4: 400002
+    second: Eye Right
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: Moose Mesh
+  - first:
+      4: 400008
+    second: TopoSurface001
+  - first:
+      4: 400010
+    second: Moose
+  - first:
+      4: 400012
+    second: Moose Head
+  - first:
+      4: 400014
+    second: Moose Jaw
+  - first:
+      4: 400016
+    second: Moose L Calf
+  - first:
+      4: 400018
+    second: Moose L Clavicle
+  - first:
+      4: 400020
+    second: Moose L Ear
+  - first:
+      4: 400022
+    second: Moose L Ear02
+  - first:
+      4: 400024
+    second: Moose L Eyebrow
+  - first:
+      4: 400026
+    second: Moose L Finger0
+  - first:
+      4: 400028
+    second: Moose L Foot
+  - first:
+      4: 400030
+    second: Moose L Forearm
+  - first:
+      4: 400032
+    second: Moose L Hand
+  - first:
+      4: 400034
+    second: Moose L Lower Eyelid
+  - first:
+      4: 400036
+    second: Moose L Lower Mouth
+  - first:
+      4: 400038
+    second: Moose L Mouth
+  - first:
+      4: 400040
+    second: Moose L Thigh
+  - first:
+      4: 400042
+    second: Moose L Toe0
+  - first:
+      4: 400044
+    second: Moose L Upper Eyelid
+  - first:
+      4: 400046
+    second: Moose L Upper Mouth
+  - first:
+      4: 400048
+    second: Moose L UpperArm
+  - first:
+      4: 400050
+    second: Moose Neck
+  - first:
+      4: 400052
+    second: Moose Pelvis
+  - first:
+      4: 400054
+    second: Moose R Calf
+  - first:
+      4: 400056
+    second: Moose R Clavicle
+  - first:
+      4: 400058
+    second: Moose R Ear
+  - first:
+      4: 400060
+    second: Moose R Ear02
+  - first:
+      4: 400062
+    second: Moose R Eyebrow
+  - first:
+      4: 400064
+    second: Moose R Finger0
+  - first:
+      4: 400066
+    second: Moose R Foot
+  - first:
+      4: 400068
+    second: Moose R Forearm
+  - first:
+      4: 400070
+    second: Moose R Hand
+  - first:
+      4: 400072
+    second: Moose R Lower Eyelid
+  - first:
+      4: 400074
+    second: Moose R Lower Mouth
+  - first:
+      4: 400076
+    second: Moose R Mouth
+  - first:
+      4: 400078
+    second: Moose R Thigh
+  - first:
+      4: 400080
+    second: Moose R Toe0
+  - first:
+      4: 400082
+    second: Moose R Upper Eyelid
+  - first:
+      4: 400084
+    second: Moose R Upper Mouth
+  - first:
+      4: 400086
+    second: Moose R UpperArm
+  - first:
+      4: 400088
+    second: Moose Spine
+  - first:
+      4: 400090
+    second: Moose Spine1
+  - first:
+      4: 400092
+    second: Moose Spine2
+  - first:
+      4: 400094
+    second: Moose Tail
+  - first:
+      4: 400096
+    second: Moose Tongue
+  - first:
+      4: 400098
+    second: Moose Tongue02
+  - first:
+      4: 400100
+    second: Moose Tongue03
+  - first:
+      21: 2100000
+    second: Moose
+  - first:
+      21: 2100002
+    second: Eyes
+  - first:
+      21: 2100004
+    second: Eye Shine
+  - first:
+      23: 2300000
+    second: Eye Left
+  - first:
+      23: 2300002
+    second: Eye Right
+  - first:
+      23: 2300004
+    second: Moose Mesh
+  - first:
+      33: 3300000
+    second: Eye Left
+  - first:
+      33: 3300002
+    second: Eye Right
+  - first:
+      33: 3300004
+    second: Moose Mesh
+  - first:
+      43: 4300000
+    second: Moose Mesh
+  - first:
+      43: 4300002
+    second: Eye Right
+  - first:
+      43: 4300004
+    second: Eye Left
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Moose Mesh
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -138,7 +368,7 @@ ModelImporter:
       name: Moose
     second: {fileID: 2100000, guid: 72ce98e5f2f2b9e468a69bda4e0da9f2, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -147,6 +377,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -155,6 +386,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -169,21 +401,33 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -191,10 +435,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Moose Pelvis
       humanName: Hips
@@ -646,14 +893,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
