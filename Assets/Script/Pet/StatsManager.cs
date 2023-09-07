@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PetStats : MonoBehaviour
+public class StatsManager : MonoBehaviour
 {
     [Header("BASE STATS")]
     [Space]
@@ -12,33 +12,21 @@ public class PetStats : MonoBehaviour
     [Range(0, 50)]
     [SerializeField] private int DecaySpd = 1;
 
-    public float CurrentHunger
-    {
-        get { return currentHunger; }
-        set { currentHunger = value; }
-    }
-    public float CurrentHappiness
-    {
-        get { return currentHappiness; }
-        set { currentHappiness = value; }
-    }
-    public float MaxHunger
-    {
-        get { return maxHunger; }
-    }
-    public float MaxHappiness
-    {
-        get { return maxHappiness; }
-    }
+    public float CurrentHunger { get => currentHunger; set => currentHunger = value; }
+    public float CurrentHappiness { get => currentHappiness; set => currentHappiness = value; }
+    public float MaxHunger { get => maxHunger; }
+    public float MaxHappiness { get => maxHappiness; }
+
+    private static StatsManager instance;
+    public static StatsManager Instance { get => instance; set => instance = value; }
+
     private void Start()
     {
-        SetStats();
-        UIManager.Instance.LoadResourceForUI();
+        instance = this;
     }
 
-    private void Update()
+    public void StatsUpdate()
     {
-
         CurrentHunger = Mathf.Clamp(CurrentHunger, 0, maxHunger);
         CurrentHappiness = Mathf.Clamp(CurrentHappiness, 0, maxHappiness);
 
@@ -61,7 +49,7 @@ public class PetStats : MonoBehaviour
         }
     }
 
-    private void SetStats()
+    public void SetStats()
     {
         maxHunger = 100;
         maxHappiness = 100;

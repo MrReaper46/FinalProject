@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [Header("SET_PETSTATS")]
-    [SerializeField] protected PetStats PetStats_Select;
+    [SerializeField] protected StatsManager PetStats_Select;
 
     [Header("SET_TEXT")]
     protected TMP_Text hungerVal;
@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
 
     private void SetupStat()
     {
-        PetStats_Select = GameObject.Find("Pet").GetComponent<PetStats>();
+        PetStats_Select = GameObject.Find("Pet").GetComponent<StatsManager>();
         HungerVal = GameObject.Find("Hunger_stat").GetComponent<TMP_Text>();
         HappinessVal = GameObject.Find("Happiness_stat").GetComponent<TMP_Text>();
     }
@@ -88,29 +88,38 @@ public class UIManager : MonoBehaviour
         EN_off = Resources.Load<Sprite>("UI/energy_disable");
     }
 
-    void Update()
+    public void UpdateUI()
     {
-        UpdateStatsPanel();
+        GetStats();
 
+        UpdateEn_UI();
+        UpdateHappiness_UI();
+
+        UpdateStatsPanel();
+    }
+
+    private void GetStats()
+    {
         maxEN = Mathf.CeilToInt(PetStats_Select.MaxHunger / 20);
         maxHP = Mathf.CeilToInt(PetStats_Select.MaxHappiness);
         remainEN = Mathf.CeilToInt(PetStats_Select.CurrentHunger / 20);
         remainHP = Mathf.CeilToInt(PetStats_Select.CurrentHappiness);
+    }
 
-        UpdateStat(maxEN,remainEN,img_EN,EN_on,EN_off);
-
+    private void UpdateHappiness_UI()
+    {
         HappinessFill.value = remainHP;
     }
 
-    private void UpdateStat(int max, int remain, Image[] img, Sprite sprite_On, Sprite  sprite_Off)
+    private void UpdateEn_UI()
     {
-        for (int i = 0; i < remain; i++)
+        for (int i = 0; i < remainEN; i++)
         {
-            img[i].sprite = sprite_On;
+            img_EN[i].sprite = EN_on;
         }
-        for (int i = max - 1; i >= remain; i--)
+        for (int i = maxEN - 1; i >= remainEN; i--)
         {
-            img[i].sprite = sprite_Off;
+            img_EN[i].sprite = EN_off;
         }
     }
 
