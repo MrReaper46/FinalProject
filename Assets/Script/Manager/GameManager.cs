@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         GameObject NoticePopup = GameObject.Find("Popup_Notice");
         NoticePopup.transform.localScale = Vector3.zero;
         NoticePopup.transform.DOScale(new Vector3(1, 1), 0.4f).SetEase(Ease.OutBack);
+        SoundManager.Instance.PlaySound(GameObject.Find("SFX_Fail").GetComponent<AudioSource>());
         yield return null;
     }
 
