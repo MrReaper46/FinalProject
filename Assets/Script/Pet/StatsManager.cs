@@ -9,9 +9,10 @@ public class StatsManager : MonoBehaviour
     [SerializeField] private float currentHunger;
     [SerializeField] private float maxHappiness;
     [SerializeField] private float currentHappiness;
+    [SerializeField] private string currentPet;
     [Range(0, 50)]
     [SerializeField] private int DecaySpd = 1;
-
+    public string CurrentPet { get => currentPet; }
     public float CurrentHunger { get => currentHunger; set => currentHunger = value; }
     public float CurrentHappiness { get => currentHappiness; set => currentHappiness = value; }
     public float MaxHunger { get => maxHunger; }
@@ -27,6 +28,7 @@ public class StatsManager : MonoBehaviour
 
     public void StatsUpdate()
     {
+        currentPet = PetManager.Instance.PetName;
         CurrentHunger = Mathf.Clamp(CurrentHunger, 0, maxHunger);
         CurrentHappiness = Mathf.Clamp(CurrentHappiness, 0, maxHappiness);
 
@@ -46,6 +48,11 @@ public class StatsManager : MonoBehaviour
         else
         {
             CurrentHappiness     -= Time.deltaTime * DecaySpd;
+        }
+
+        if (CurrentHappiness == 0)
+        {
+            DecaySpd *= 10;
         }
     }
 

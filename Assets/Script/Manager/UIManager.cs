@@ -132,11 +132,13 @@ public class UIManager : MonoBehaviour
     void Pet()
     {
         PetStats_Select.CurrentHappiness += 20;
+        PetManager.Instance.CloneAnimator.SetTrigger("Pet");
     }
 
     void Feed()
     {
         PetStats_Select.CurrentHunger += 20;
+        PetManager.Instance.CloneAnimator.SetTrigger("Feed");
     }
 
 }

@@ -73,5 +73,6 @@ public class PetManager : MonoBehaviour
         PetAnimator = Resources.Load(PetPath) as RuntimeAnimatorController;
         cloneAnimator = clonePet.GetComponent<Animator>();
         cloneAnimator.runtimeAnimatorController = PetAnimator;
+
     }
 }
