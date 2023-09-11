@@ -3200,6 +3200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 0}
   petPrefabs: []
+  selectedPet: 0
   petName: 
   petAnimator: {fileID: 0}
   clonePet: {fileID: 0}

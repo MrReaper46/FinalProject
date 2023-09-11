@@ -11,6 +11,9 @@ public class PetManager : MonoBehaviour
     [SerializeField] private GameObject[] petPrefabs;
     public GameObject[] PetPrefabs { get => petPrefabs; set => petPrefabs = value; }
 
+    [SerializeField] private int selectedPet;
+    public int SeletectPet { get => selectedPet; set => selectedPet = value; }
+
     [SerializeField] private string petName;
     public string PetName { get => petName; set => petName = value; }
 
@@ -48,7 +51,7 @@ public class PetManager : MonoBehaviour
         spawnPosition = GameObject.Find("Pet").transform;
 
         //Create Pet
-        int selectedPet = PlayerPrefs.GetInt("SelectedPet");
+        selectedPet = PlayerPrefs.GetInt("SelectedPet");
         GameObject prefabs = PetPrefabs[selectedPet];
         clonePet = Instantiate(prefabs, SpawnPosition.position, Quaternion.identity, GameObject.Find("Pet").transform);
         petName = prefabs.name;
